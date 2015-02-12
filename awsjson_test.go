@@ -57,7 +57,7 @@ func TestGetIpadderService(t *testing.T) {
 func TestSetHeadder(t *testing.T) {
 	aws := NewAwsIpadder()
 	aws.SetHeadder("hoge")
-	if aws.Headder != "hoge" {
+	if aws.Headder != "hoge " {
 		t.Errorf("want hoge. got %s", aws.Headder)
 	}
 }
