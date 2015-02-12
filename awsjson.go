@@ -39,6 +39,7 @@ func NewAwsIpadder() *AwsJson {
 	if err != nil {
 		log.Fatal(err)
 	}
+	awsip_json.Headder = ""
 	return &awsip_json
 }
 
