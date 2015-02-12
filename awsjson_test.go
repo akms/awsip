@@ -20,7 +20,7 @@ func TestNewAwsIpadder(t *testing.T) {
 		t.Errorf("want map array. example:[{ ip_prefix:xx.xx.xx.xx/yy, region:us-east-1, service:AMAZON }]")
 	}
 	if aws.Headder != "" {
-		t.Errorf("want nil.got %s", aws.Headder)
+		t.Errorf("want nil string. got %s", aws.Headder)
 	}
 }
 
