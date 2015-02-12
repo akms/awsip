@@ -42,7 +42,7 @@ import (
 func main() {
     var awsipadder *awsip.AwsJson = awsip.NewAwsIpadder()
     awsipadder.SetHeadder("deny")
-    b := bytes.NewBufferString("This is Example")
+    b := bytes.NewBufferString("This is Example\n")
     b.Write(awsipadder.GetIpadderRegion("ap-northeast-1").Bytes())
     fmt.Printf(b.String())
 }
