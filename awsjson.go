@@ -66,7 +66,7 @@ func (ip *AwsJson) GetIpadderRegion(region string) (ip_buffer *bytes.Buffer) {
 	ip_buffer = bytes.NewBufferString("")
 	for _, val := range ip.Prefixes {
 		if val["region"] == region {
-			ip_buffer.WriteString(ip.Headder)
+			if ip.Headder != "" { ip_buffer.WriteString(ip.Headder) }
 			ip_buffer.WriteString(val["ip_prefix"])
 			ip_buffer.WriteString("\n")
 		}
