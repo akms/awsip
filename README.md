@@ -2,6 +2,7 @@
 
 ## Installation
 To install `awsip.go`
+
 `$ go get github.com/akms/awsip`
 
 ## Getting Started
@@ -13,7 +14,7 @@ var awsipadder *awsip.AwsJson = awsip.NewAwsIpadder()
 ``` 
 
 ## Example
-Create a file named example.go, and within it: 
+Create a file named example.go, and within it code: 
 ```go
 package main
 import (
@@ -30,9 +31,9 @@ func main() {
 }
 ```
 
-`go run example.go`
-
-```shell
+run example.go  
+```bash
+$ go run example.go
 This is Example
 deny 54.231.224.0/21
 deny 54.238.0.0/16
