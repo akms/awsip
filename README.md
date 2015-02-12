@@ -1,4 +1,5 @@
 # awsip.go
+awsip.go is simple package for searching ipadders from AWS ip-ranges.json in Go.
 
 ## Installation
 To install `awsip.go`
