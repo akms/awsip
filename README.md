@@ -15,6 +15,7 @@ var awsipadder *awsip.AwsJson = awsip.NewAwsIpadder()
 ## Example
 Create a file named example.go, and within it: 
 ```go
+package main
 import (
     "bytes"
     "fmt"
