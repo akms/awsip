@@ -91,5 +91,9 @@ func (ip *AwsJson) GetIpadderService(service string) (ip_buffer *bytes.Buffer) {
 }
 
 func (ip *AwsJson) SetHeadder(head_string string) {
-	ip.Headder = head_string + " "
+	if head_string == "" { 
+		ip.Headder = ""
+	} else {
+		ip.Headder = head_string + " "
+	}
 }
