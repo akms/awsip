@@ -60,6 +60,10 @@ func (ip *AwsJson) GetIpadder(region string, service string) (ip_buffer *bytes.B
 }
 
 func (ip *AwsJson) GetIpadderRegion(region string) (ip_buffer *bytes.Buffer) {
+	if region == "" {
+		var geterr error = fmt.Errorf("nil value region .\n")
+		log.Fatal(geterr)
+	}
 	ip_buffer = bytes.NewBufferString("")
 	for _, val := range ip.Prefixes {
 		if val["region"] == region {
@@ -73,6 +77,10 @@ func (ip *AwsJson) GetIpadderRegion(region string) (ip_buffer *bytes.Buffer) {
 }
 
 func (ip *AwsJson) GetIpadderService(service string) (ip_buffer *bytes.Buffer) {
+	if service == "" {
+		var geterr error = fmt.Errorf("nil value service.\n")
+		log.Fatal(geterr)
+	}
 	ip_buffer = bytes.NewBufferString("")
 	for _, val := range ip.Prefixes {
 		if val["service"] == service {
@@ -86,5 +94,9 @@ func (ip *AwsJson) GetIpadderService(service string) (ip_buffer *bytes.Buffer) {
 }
 
 func (ip *AwsJson) SetHeadder(head_string string) {
+	if head_string == "" {
+		var geterr error = fmt.Errorf("No value headder string.\n")
+		log.Fatal(geterr)
+	}
 	ip.Headder = head_string
 }
